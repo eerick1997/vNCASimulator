@@ -1,0 +1,215 @@
+#include "widget_evolution_space.h"
+#include <QPainterPath>
+#include <QDebug>
+#include <QTimer>
+
+widget_evolution_space::widget_evolution_space(QWidget *parent)
+    : QWidget(parent), project(true), show_grid(true) {
+  grid_pen.setWidthF(0.5);
+}
+
+void widget_evolution_space::mousePressEvent(QMouseEvent *event) {
+  qreal offset = cell_size / 2;
+  int32_t x_position = event->x() / cell_size;
+  int32_t y_position = (event->y() - offset) / cell_size;
+  if ((x_position >= 0 and x_position < Cellular_automata->get_width()) and
+      (y_position >= 0 and y_position < Cellular_automata->get_height()))
+    Cellular_automata->change_cell(x_position, y_position), update();
+}
+
+void widget_evolution_space::paintEvent(QPaintEvent *) {
+  QPainter painter(this);
+  grid_pen.setBrush(grid_color);
+  painter.setPen(grid_pen);
+  if (evolve) {
+    Cellular_automata->next_generation();
+    if (Cellular_automata->get_scale() < 1.0)
+      Cellular_automata->projection();
+  }
+  draw_dead_cell(painter);
+  draw_with_projection(painter);
+  //draw_evolution_space(painter);
+}
+
+void widget_evolution_space::draw_dead_cell(QPainter &painter) {
+    const int32_t width = Cellular_automata->get_width();
+    const int32_t height = Cellular_automata->get_height();
+    qreal x_position, y_position, offset = cell_size / 2;
+
+    for(int row = 0; row < width; row++) {
+        for(int col = 0; col < height; col++) {
+            int32_t &current_cell = Cellular_automata->evolution_space[row][col];
+            x_position = row * cell_size;
+            y_position = col * cell_size;
+
+            if(current_cell == 0)
+                draw_cube(painter, x_position, y_position + offset, cell_size, death_color, death_color);
+        }
+    }
+}
+
+void widget_evolution_space::draw_cube(QPainter &painter, qreal x, qreal y, qreal size, QColor &color, QColor &face_color) {
+    qreal offset = size / 2;
+    QPainterPath top_path, right_path;
+    QPolygon top_face, right_face;
+    QLine line(x + size, y, x + size + offset, y - offset);
+
+    top_face += QPoint(x, y);
+    top_face += QPoint(x + size, y);
+    top_face += QPoint(x + size + offset, y - offset);
+    top_face += QPoint(x + offset, y - offset);
+
+    right_face += QPoint(x + size, y);
+    right_face += QPoint(x + size, y + size);
+    right_face += QPoint(x + size + offset, y + size - offset);
+    right_face += QPoint(x + size + offset, y - offset);
+
+
+    painter.setPen(QPen(death_color));
+
+    top_path.addPolygon(top_face);
+    right_path.addPolygon(right_face);
+
+    painter.fillPath(top_path, color);
+    painter.fillPath(right_path, color);
+
+    painter.drawPolygon(top_face);
+    painter.drawPolygon(right_face);
+
+    painter.fillRect(QRect(x, y, size, size), face_color);
+    painter.drawRect(QRect(x, y, size, size));
+}
+
+void widget_evolution_space::draw_with_projection(QPainter &painter) {
+    qreal x_position, y_position;
+    qreal offset = cell_size / 2;
+    const int32_t width = Cellular_automata->get_width();
+    const int32_t height = Cellular_automata->get_height();
+
+    int32_t R, G, B;
+    uint32_t code_color;
+    alive_color.getRgb(&R, &G, &B);
+    code_color = from_RGB_to_int(R, G, B);
+
+    for (int32_t row = 0; row < width; row++) {
+      for (int32_t col = height - 1; col >= 0; col--) {
+        int32_t &current_cell = Cellular_automata->evolution_space[row][col];
+        x_position = (qreal)(cell_size * row);
+        y_position = (qreal)(cell_size * col);
+        if (current_cell > 0)
+            draw_cube(painter, x_position, y_position + offset, cell_size, projection_color, alive_color);
+        else if(current_cell < 0)
+            draw_cube(painter, x_position, y_position + offset, cell_size, projection_color, projection_color);
+      }
+    }
+}
+
+void widget_evolution_space::draw_evolution_space(QPainter &painter) {
+  qreal margin_left, margin_top;
+  int32_t R, G, B;
+  uint32_t code_color;
+  alive_color.getRgb(&R, &G, &B);
+  code_color = from_RGB_to_int(R, G, B);
+
+  for (int32_t x = 0; x < Cellular_automata->get_width(); x++) {
+    for (int32_t y = 0; y < Cellular_automata->get_height(); y++) {
+      int32_t &current_cell = Cellular_automata->evolution_space[x][y];
+      margin_left = (qreal)(cell_size * x);
+      margin_top = (qreal)(cell_size * y);
+      QRectF r(margin_left, margin_top, (qreal)cell_size, (qreal)cell_size);
+      if (current_cell == 0)
+        painter.fillRect(r, death_color);
+      else if (current_cell < 0)
+        painter.fillRect(r, projection_color);
+      else {
+        if (show_gradient)
+          painter.fillRect(
+              r, QBrush(QColor(get_gradient_color(code_color, current_cell))));
+        else
+          painter.fillRect(r, alive_color);
+      }
+      if (show_grid)
+        painter.drawRect(r);
+    }
+  }
+}
+
+void widget_evolution_space::set_alive_color(const QColor &color) {
+  alive_color = color;
+  update();
+}
+
+void widget_evolution_space::set_death_color(const QColor &color) {
+  death_color = color;
+  update();
+}
+
+void widget_evolution_space::set_projection_color(const QColor &color) {
+  projection_color = color;
+  update();
+}
+
+void widget_evolution_space::set_grid_color(const QColor &color) {
+  grid_color = color;
+  update();
+}
+
+void widget_evolution_space::set_cell_size(int16_t n_cell_size) {
+  cell_size = n_cell_size;
+  update();
+}
+
+void widget_evolution_space::set_speed(int16_t n_speed) {
+  speed = n_speed;
+  update();
+}
+
+void widget_evolution_space::next_generation_update() {
+  evolve = 1;
+  repaint();
+  evolve = 0;
+}
+
+void widget_evolution_space::set_project(bool state) { project = state; }
+
+void widget_evolution_space::set_show_grid(bool state) {
+  show_grid = state;
+  update();
+}
+
+void widget_evolution_space::set_show_gradient(bool state) {
+  show_gradient = state;
+  update();
+}
+
+inline void widget_evolution_space::from_int_to_RGB(const int32_t code_color,
+                                                    int32_t *R, int32_t *G,
+                                                    int32_t *B) {
+  *R = (code_color >> 16) & 0xFFu;
+  *G = (code_color >> 8) & 0XFFu;
+  *B = code_color & 0XFFu;
+}
+
+inline uint32_t widget_evolution_space::from_RGB_to_int(const int32_t R,
+                                                        const int32_t G,
+                                                        const int32_t B) {
+  return 0X00FFFFFFu & ((R << 16) | (G << 8) | B);
+}
+
+/**Warning: This function can be as complex as you want depending of the value
+if the constant numeber_of_states, alse if that constant is biggest than
+limit_ttl you can get an infinite loop, so be aware of that.**/
+inline uint32_t
+widget_evolution_space::get_gradient_color(const int32_t current_color,
+                                           const int32_t current_cell) {
+  int32_t range = Cellular_automata->limit_ttl / number_of_states;
+  int32_t offset =
+      range * ((current_color + current_cell > 0X00FFFFFF) ? -1 : 1);
+  for (int nth_state = 1; nth_state <= number_of_states; nth_state++)
+    if (current_cell >= range * (nth_state - 1) and
+        current_cell <= range * nth_state)
+      return current_color + offset * (nth_state - 1);
+  return current_color + offset * number_of_states;
+}
+
+widget_evolution_space::~widget_evolution_space() { delete Cellular_automata; }
