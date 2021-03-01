@@ -44,15 +44,15 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    Image Resources/choose.png \
-    Image Resources/clear.png \
-    Image Resources/color.png \
-    Image Resources/draw.png \
-    Image Resources/pause.png \
-    Image Resources/play.png \
-    Image Resources/polynomial.png \
-    Image Resources/save.png \
-    Image Resources/step.png \
-    Image Resources/stop.png \
-    Image Resources/zoomin.png \
-    Image Resources/zoomout.png
+    res/img/choose.png \
+    res/img/clear.png \
+    res/img/color.png \
+    res/img/draw.png \
+    res/img/pause.png \
+    res/img/play.png \
+    res/img/polynomial.png \
+    res/img/save.png \
+    res/img/step.png \
+    res/img/stop.png \
+    res/img/zoomin.png \
+    res/img/zoomout.png

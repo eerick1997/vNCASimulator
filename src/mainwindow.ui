@@ -36,7 +36,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="tab_actions">
        <attribute name="title">
@@ -80,7 +80,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/draw.png</normaloff>../Image Resources/draw.png</iconset>
+           <normaloff>../res/img/draw.png</normaloff>../res/img/draw.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -121,7 +121,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/step.png</normaloff>../Image Resources/step.png</iconset>
+           <normaloff>../res/img/step.png</normaloff>../res/img/step.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -150,7 +150,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/clear.png</normaloff>../Image Resources/clear.png</iconset>
+           <normaloff>../res/img/clear.png</normaloff>../res/img/clear.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -179,7 +179,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/play.png</normaloff>../Image Resources/play.png</iconset>
+           <normaloff>../res/img/play.png</normaloff>../res/img/play.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -208,7 +208,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/save.png</normaloff>../Image Resources/save.png</iconset>
+           <normaloff>../res/img/save.png</normaloff>../res/img/save.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -237,7 +237,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/choose.png</normaloff>../Image Resources/choose.png</iconset>
+           <normaloff>../res/img/choose.png</normaloff>../res/img/choose.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -936,7 +936,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../Image Resources/moore.png</pixmap>
+          <pixmap>../res/img/moore.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -958,7 +958,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap>../Image Resources/vonNeumann.png</pixmap>
+          <pixmap>../res/img/vonNeumann.png</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -4577,7 +4577,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/random.png</normaloff>../Image Resources/random.png</iconset>
+           <normaloff>../res/img/random.png</normaloff>../res/img/random.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4662,7 +4662,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/clear.png</normaloff>../Image Resources/clear.png</iconset>
+           <normaloff>../res/img/clear.png</normaloff>../res/img/clear.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4890,7 +4890,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/color.png</normaloff>../Image Resources/color.png</iconset>
+           <normaloff>../res/img/color.png</normaloff>../res/img/color.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4919,7 +4919,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/color.png</normaloff>../Image Resources/color.png</iconset>
+           <normaloff>../res/img/color.png</normaloff>../res/img/color.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4945,7 +4945,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/color.png</normaloff>../Image Resources/color.png</iconset>
+           <normaloff>../res/img/color.png</normaloff>../res/img/color.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4971,7 +4971,7 @@
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../Image Resources/color.png</normaloff>../Image Resources/color.png</iconset>
+           <normaloff>../res/img/color.png</normaloff>../res/img/color.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -5320,8 +5320,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1029</width>
-             <height>510</height>
+             <width>1035</width>
+             <height>516</height>
             </rect>
            </property>
            <widget class="QWidget" name="verticalLayoutWidget">
@@ -5354,7 +5354,7 @@
      <x>0</x>
      <y>0</y>
      <width>1100</width>
-     <height>24</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
