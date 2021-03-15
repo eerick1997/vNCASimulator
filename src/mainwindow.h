@@ -152,6 +152,8 @@ private slots:
 
   void on_checkGradient_clicked(bool checked);
 
+  void on_check3D_clicked(bool checked);
+
 private:
   // Attributes
   Ui::MainWindow *ui;

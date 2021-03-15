@@ -6,6 +6,8 @@
 #include <QPainter>
 #include <QScrollArea>
 #include <QWidget>
+#include <QScrollBar>
+#include <QScrollEvent>
 
 namespace Ui {
 class MatrixWindow;
@@ -18,6 +20,11 @@ public:
   void setDimensions();
   explicit MatrixWindow(QWidget *parent = nullptr);
   ~MatrixWindow();
+
+private slots:
+  void verticalScrollBarChanged(int);
+  void horizontalScrollBarChanged(int);
+
 signals:
   void disableButtons();
 

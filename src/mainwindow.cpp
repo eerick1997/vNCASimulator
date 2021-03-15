@@ -237,7 +237,7 @@ void MainWindow::on_pushButton_clicked(bool checked) {
     QIcon *icon = new QIcon();
     if (checked) {
       timer->start(ui->spinTime->value());
-      icon->addPixmap(QPixmap("../Image Resources/pause.png"), QIcon::Normal,
+      icon->addPixmap(QPixmap("../res/img/pause.png"), QIcon::Normal,
                       QIcon::On);
       ui->nextGenerationButton->setEnabled(false);
       ui->pushButton->setText("Pause");
@@ -245,7 +245,7 @@ void MainWindow::on_pushButton_clicked(bool checked) {
     } else {
       if (timer->isActive())
         timer->stop();
-      icon->addPixmap(QPixmap("../Image Resources/play.png"), QIcon::Normal,
+      icon->addPixmap(QPixmap("../res/img/play.png"), QIcon::Normal,
                       QIcon::On);
       ui->nextGenerationButton->setEnabled(true);
       ui->pushButton->setText("Play");
@@ -1461,4 +1461,9 @@ void MainWindow::on_TXTRuleName_textEdited(const QString &arg1) {
 void MainWindow::on_checkGradient_clicked(bool checked) {
   if (mw != nullptr)
     mw->Widget_evolution_space->set_show_gradient(checked);
+}
+
+void MainWindow::on_check3D_clicked(bool checked){
+    if(mw != nullptr)
+        mw->Widget_evolution_space->set_3d_mode(checked);
 }

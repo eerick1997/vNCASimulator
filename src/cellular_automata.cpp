@@ -19,9 +19,18 @@ cellular_automata::cellular_automata(int16_t width, int16_t height,
   generation = alive_cells = c_alive_cells = 0;
   Polynomial = new polynomial(survive_min, survive_max, born_min, born_max,
                               neighbor_type);
+  evolution_space = std::vector<std::vector<int>>(2000, std::vector<int>(2000, 0));
+  aux_space = std::vector<std::vector<int>>(2000, std::vector<int>(2000, 0));
+}
 
-  evolution_space.resize(MAX_SIZE, column(MAX_SIZE, 0));
-  aux_space.resize(MAX_SIZE, column(MAX_SIZE, 0));
+void cellular_automata::run() {
+    if(envolve) {
+        next_generation();
+        if(scale < 1.0) {
+            projection();
+        }
+    }
+    envolve = false;
 }
 
 // Getters
@@ -49,7 +58,6 @@ int8_t cellular_automata::get_born_max() { return born_max; }
 
 double cellular_automata::get_entropy() {
   double x = get_density();
-  //qDebug() << "gen = " << generation << " p = " << x << " q = " << (1 - x) << " res = " << (x > 0 ? -(x * log2(x) + (1 - x) * log2(1 - x)) : 0)
   return x > 0 ? -(x * log2(x) + (1 - x) * log2(1 - x)) : 0;
 }
 
@@ -276,6 +284,7 @@ void cellular_automata::change_cell(int32_t x, int32_t y) {
 
 void cellular_automata::projection() {
   int32_t c_height = height, c_width = width;
+
   for (int32_t y = 0; y < c_height; y++) {
     for (int32_t x = 0; x < c_width; x++) {
       if (x < (c_width - 1) and y > 0) {
@@ -293,7 +302,7 @@ void cellular_automata::projection() {
 inline int32_t cellular_automata::mod(int32_t a, int32_t m) {
   if (a < 0)
     a += m;
-  return a %= m;
+  return a % m;
 }
 
 inline int32_t cellular_automata::get_x_position(const int32_t x) {
@@ -316,6 +325,4 @@ inline int32_t cellular_automata::get_y_position(const int32_t y) {
 
 cellular_automata::~cellular_automata() {
   delete Polynomial;
-  evolution_space.clear();
-  aux_space.clear();
 }

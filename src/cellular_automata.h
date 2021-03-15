@@ -6,16 +6,20 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
+#include <array>
 
 #define MAX_SIZE 2000
 
 #ifndef CELLULAR_AUTOMATA_H
 #define CELLULAR_AUTOMATA_H
 
-using column = std::vector<int32_t>;
-using matrix = std::vector<column>;
+using matrix = std::vector<std::vector<int>>;
 
-class cellular_automata {
+class cellular_automata : public QThread{
+
+protected:
+    void run();
+
 private:
   // Attributes
   int64_t generation, c_alive_cells;
@@ -59,6 +63,8 @@ public:
   double get_density();
   std::vector<int8_t> get_totalistic_von_neumann();
   bool get_totalistic_rules();
+  bool project, envolve;
+
   // Setters
   void set_generation(int64_t);
   void set_width(int16_t);
