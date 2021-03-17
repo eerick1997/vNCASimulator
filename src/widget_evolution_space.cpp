@@ -97,35 +97,16 @@ void widget_evolution_space::draw_dead_cell(QPainter &painter) {
 
 void widget_evolution_space::draw_cube(QPainter &painter, qreal x, qreal y, qreal size, QColor &color, QColor &face_color) {
     qreal offset = size / 2;
-    QPainterPath top_path, right_path;
-    QPolygon top_face, right_face;
-    QLine line(x + size, y, x + size + offset, y - offset);
-
-    top_face += QPoint(x, y);
-    top_face += QPoint(x + size, y);
-    top_face += QPoint(x + size + offset, y - offset);
-    top_face += QPoint(x + offset, y - offset);
-
-    right_face += QPoint(x + size, y);
-    right_face += QPoint(x + size, y + size);
-    right_face += QPoint(x + size + offset, y + size - offset);
-    right_face += QPoint(x + size + offset, y - offset);
-
-
+    QPainterPath cube_path;
+    QPolygonF cube_faces;
+    cube_faces << QPointF(x + size, y) << QPointF(x, y) << QPointF(x + offset, y - offset)  << QPointF(x + size + offset, y - offset)
+                    << QPointF(x + size + offset, y + size - offset) << QPointF(x + size, y + size)<< QPointF(x + size, y) << QPointF(x + size + offset, y - offset) ;
     painter.setPen(QPen(death_color));
-
-    top_path.addPolygon(top_face);
-    right_path.addPolygon(right_face);
-
-    painter.fillPath(top_path, color);
-    painter.fillPath(right_path, color);
-
-    painter.drawPolygon(top_face);
-    painter.drawPolygon(right_face);
-
+    cube_path.addPolygon(cube_faces);
+    painter.fillPath(cube_path, color);
+    painter.drawPolygon(cube_faces);
     painter.fillRect(QRect(x, y, size, size), face_color);
-    painter.drawRect(QRect(x, y, size, size));
-}
+    painter.drawRect(QRect(x, y, size, size));}
 
 void widget_evolution_space::draw_with_projection(QPainter &painter) {
     qreal x_position, y_position, offset = cell_size / 2.0;
