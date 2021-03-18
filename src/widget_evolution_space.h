@@ -31,7 +31,6 @@ public slots:
   void draw_with_projection(QPainter&);
   void draw_cube(QPainter&, qreal, qreal, qreal, QColor&, QColor&);
   void draw_dead_cell(QPainter&);
-  void calculate_next_generation();
   void render_evolution_space(QPainter &);
 
 private:

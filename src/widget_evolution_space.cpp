@@ -48,11 +48,6 @@ inline int16_t widget_evolution_space::get_max_value(int16_t value, int16_t limi
     return value >= limit ? limit : value;
 }
 
-void widget_evolution_space::calculate_next_generation() {
-      Cellular_automata->envolve = true;
-      Cellular_automata->start();
-}
-
 
 void widget_evolution_space::render_evolution_space(QPainter &painter) {
     if(show_cubes) {
@@ -65,11 +60,6 @@ void widget_evolution_space::paintEvent(QPaintEvent *) {
   QPainter painter(this);
   grid_pen.setBrush(grid_color);
   painter.setPen(grid_pen);
-
-  if(!Cellular_automata->isRunning()) {
-    Cellular_automata->start();
-    Cellular_automata->wait(10);
-  }
   render_evolution_space(painter);
 }
 
@@ -106,7 +96,8 @@ void widget_evolution_space::draw_cube(QPainter &painter, qreal x, qreal y, qrea
     painter.fillPath(cube_path, color);
     painter.drawPolygon(cube_faces);
     painter.fillRect(QRect(x, y, size, size), face_color);
-    painter.drawRect(QRect(x, y, size, size));}
+    painter.drawRect(QRect(x, y, size, size));
+}
 
 void widget_evolution_space::draw_with_projection(QPainter &painter) {
     qreal x_position, y_position, offset = cell_size / 2.0;
@@ -158,12 +149,10 @@ void widget_evolution_space::draw_evolution_space(QPainter &painter) {
   alive_color.getRgb(&R, &G, &B);
   code_color = from_RGB_to_int(R, G, B);
 
-  matrix Matrix = Cellular_automata->get_evolution_space();
-
   for (int32_t x = x_start; x < width and x <= x_limit; x++) {
     for (int32_t y = y_start; y < height and y <= y_limit; y++) {
 
-      const int32_t current_cell = Matrix[x][y];
+      const int32_t current_cell = Cellular_automata->evolution_space[x][y];
 
       x_position = (qreal)(cell_size * x);
       y_position = (qreal)(cell_size * y);
@@ -217,8 +206,9 @@ void widget_evolution_space::set_speed(int16_t n_speed) {
 }
 
 void widget_evolution_space::next_generation_update() {
-  Cellular_automata->envolve = true;
-  update();
+    Cellular_automata->start();
+    Cellular_automata->wait();
+    repaint();
 }
 
 void widget_evolution_space::set_project(bool state) { Cellular_automata->project = state; }

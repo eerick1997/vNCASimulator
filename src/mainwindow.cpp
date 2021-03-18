@@ -142,6 +142,7 @@ void MainWindow::loop() {
       mw = nullptr;
       return;
     }
+
     mw->Widget_evolution_space->next_generation_update();
     update_gui();
   }

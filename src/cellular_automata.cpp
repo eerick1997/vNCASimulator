@@ -19,17 +19,12 @@ cellular_automata::cellular_automata(int16_t width, int16_t height,
   generation = alive_cells = c_alive_cells = 0;
   Polynomial = new polynomial(survive_min, survive_max, born_min, born_max,
                               neighbor_type);
-  evolution_space = std::vector<std::vector<int>>(2000, std::vector<int>(2000, 0));
-  aux_space = std::vector<std::vector<int>>(2000, std::vector<int>(2000, 0));
 }
 
 void cellular_automata::run() {
-    if(envolve) {
         next_generation();
-        if(scale < 1.0) {
+        if(scale < 1.0)
             projection();
-        }
-    }
     envolve = false;
 }
 

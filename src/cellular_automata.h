@@ -13,7 +13,7 @@
 #ifndef CELLULAR_AUTOMATA_H
 #define CELLULAR_AUTOMATA_H
 
-using matrix = std::vector<std::vector<int>>;
+using matrix = std::array<std::array<int, 2000>, 2000>;
 
 class cellular_automata : public QThread{
 
