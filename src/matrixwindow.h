@@ -14,24 +14,24 @@ class MatrixWindow;
 }
 
 class MatrixWindow : public QWidget {
-  Q_OBJECT
+    Q_OBJECT
 public:
-  widget_evolution_space *Widget_evolution_space;
-  void setDimensions();
-  explicit MatrixWindow(QWidget *parent = nullptr);
-  ~MatrixWindow();
+    widget_evolution_space *Widget_evolution_space;
+    void setDimensions();
+    explicit MatrixWindow(QWidget *parent = nullptr);
+    ~MatrixWindow();
 
 private slots:
-  void verticalScrollBarChanged(int);
-  void horizontalScrollBarChanged(int);
+    void verticalScrollBarChanged(int);
+    void horizontalScrollBarChanged(int);
 
 signals:
-  void disableButtons();
+    void disableButtons();
 
 private:
-  void closeEvent(QCloseEvent *event);
-  Ui::MatrixWindow *ui;
-  void resizeEvent(QResizeEvent *event);
+    void closeEvent(QCloseEvent *event);
+    Ui::MatrixWindow *ui;
+    void resizeEvent(QResizeEvent *event);
 };
 
 #endif // MATRIXWINDOW_H
