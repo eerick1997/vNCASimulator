@@ -25,6 +25,10 @@
   <property name="windowTitle">
    <string>Settings</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../res/img/ESCOM.png</normaloff>../res/img/ESCOM.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_2">
     <item row="0" column="0">
@@ -36,7 +40,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="tab_actions">
        <attribute name="title">
@@ -5333,8 +5337,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1035</width>
-             <height>516</height>
+             <width>1029</width>
+             <height>510</height>
             </rect>
            </property>
            <widget class="QWidget" name="verticalLayoutWidget">
@@ -5357,6 +5361,81 @@
         </item>
        </layout>
       </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>About</string>
+       </attribute>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>10</y>
+          <width>701</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;vNSimulator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Artificial Life Robotics Lab (ALIROB, &lt;a href=&quot;https://www.comunidad.escom.ipn.mx/ALIROB/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.comunidad.escom.ipn.mx/ALIROB/&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;at Escuela Superior de Cómputo (ESCOM), Instituto Politécnico Nacional (IPN), México &lt;/p&gt;&lt;p&gt;in collaboration with Unconventional Computing Laboratory (UCL, &lt;a href=&quot;https://uncomp.uwe.ac.uk/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://uncomp.uwe.ac.uk/&lt;/span&gt;&lt;/a&gt;) &lt;/p&gt;&lt;p&gt;at University of the West of England (UWE), Bristol, United Kingdom &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Collaborators:&lt;/p&gt;&lt;p&gt;‣ Esquivel Valdez Alberto&lt;/p&gt;&lt;p&gt;‣ Torres Hernández Eduardo&lt;/p&gt;&lt;p&gt;‣ Vargas Romero Erick Efraín&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Using the QT Framework (&lt;a href=&quot;https://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.qt.io/&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;Project: &lt;a href=&quot;https://github.com/eerick1997/vNCASimulator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Documentation: &lt;a href=&quot;https://github.com/eerick1997/vNCASimulator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator/doc/vNSimulator.pdf&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>190</y>
+          <width>240</width>
+          <height>150</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../res/img/ESCOM.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>370</y>
+          <width>250</width>
+          <height>140</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../res/img/UWE.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>20</y>
+          <width>240</width>
+          <height>150</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../res/img/ESCOM.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
      </widget>
     </item>
    </layout>
@@ -5367,7 +5446,7 @@
      <x>0</x>
      <y>0</y>
      <width>1100</width>
-     <height>20</height>
+     <height>24</height>
     </rect>
    </property>
   </widget>
