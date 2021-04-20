@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>res/img/choose.png</file>
+        <file>res/img/clear.png</file>
+        <file>res/img/color.png</file>
+        <file>res/img/draw.png</file>
+        <file>res/img/ESCOM.png</file>
+        <file>res/img/logo.jpg</file>
+        <file>res/img/moore.png</file>
+        <file>res/img/pause.png</file>
+        <file>res/img/play.png</file>
+        <file>res/img/polynomial.png</file>
+        <file>res/img/random.png</file>
+        <file>res/img/save.png</file>
+        <file>res/img/step.png</file>
+        <file>res/img/stop.png</file>
+        <file>res/img/UWE.png</file>
+        <file>res/img/vonNeumann.png</file>
+        <file>res/img/zoomin.png</file>
+        <file>res/img/zoomout.png</file>
+    </qresource>
+</RCC>
