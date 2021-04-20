@@ -1,0 +1,10 @@
+release/cellular_automata.o
+release/main.o
+release/mainwindow.o
+release/matrixwindow.o
+release/polynomial.o
+release/widget_evolution_space.o
+release/qrc_icons.o
+release/moc_mainwindow.o
+release/moc_matrixwindow.o
+release/moc_widget_evolution_space.o
