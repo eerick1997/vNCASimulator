@@ -37,4 +37,22 @@ The current version of this program allows:
 
 ## How to execute the program
 ### Windows
-The first step is to download the corresponding [files]()
+Once that you already cloned this repository you need to move to the directory
+
+> exe/WindowsX64/debug/
+
+And just execute the file
+
+> SimuladorV2.exe
+
+### Linux 
+
+### macOS
+
+Once that you already cloned this repository you need to move to the directory 
+
+> exe/macOS/vNCASimulator/
+
+Then just execute
+
+> vNCASimulator.app
