@@ -238,7 +238,7 @@ void MainWindow::on_pushButton_clicked(bool checked) {
         QIcon *icon = new QIcon();
         if (checked) {
             timer->start(ui->spinTime->value());
-            icon->addPixmap(QPixmap("../res/img/pause.png"), QIcon::Normal,
+            icon->addPixmap(QPixmap(":icons/res/img/pause.png"), QIcon::Normal,
                             QIcon::On);
             ui->nextGenerationButton->setEnabled(false);
             ui->pushButton->setText("Pause");
@@ -246,7 +246,7 @@ void MainWindow::on_pushButton_clicked(bool checked) {
         } else {
             if (timer->isActive())
                 timer->stop();
-            icon->addPixmap(QPixmap("../res/img/play.png"), QIcon::Normal,
+            icon->addPixmap(QPixmap(":icons/res/img/play.png"), QIcon::Normal,
                             QIcon::On);
             ui->nextGenerationButton->setEnabled(true);
             ui->pushButton->setText("Play");

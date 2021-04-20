@@ -83,8 +83,8 @@
           <string>Draw</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/draw.png</normaloff>../res/img/draw.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/draw.png</normaloff>:/icons/res/img/draw.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -124,8 +124,8 @@
           <string>Next generation</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/step.png</normaloff>../res/img/step.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/step.png</normaloff>:/icons/res/img/step.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -153,8 +153,8 @@
           <string>Clear</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/clear.png</normaloff>../res/img/clear.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/clear.png</normaloff>:/icons/res/img/clear.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -182,8 +182,8 @@
           <string>Play</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/play.png</normaloff>../res/img/play.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/play.png</normaloff>:/icons/res/img/play.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -211,8 +211,8 @@
           <string>Export CA</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/save.png</normaloff>../res/img/save.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/save.png</normaloff>:/icons/res/img/save.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -240,8 +240,8 @@
           <string>Import CA</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/choose.png</normaloff>../res/img/choose.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/choose.png</normaloff>:/icons/res/img/choose.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4580,8 +4580,8 @@
           <string>Random rule</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/random.png</normaloff>../res/img/random.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/random.png</normaloff>:/icons/res/img/random.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4665,8 +4665,8 @@
           <string>Clear</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/clear.png</normaloff>../res/img/clear.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/clear.png</normaloff>:/icons/res/img/clear.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4893,8 +4893,8 @@
           <string>Living cells</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/color.png</normaloff>../res/img/color.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/color.png</normaloff>:/icons/res/img/color.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4922,8 +4922,8 @@
           <string>Death cells</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/color.png</normaloff>../res/img/color.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/color.png</normaloff>:/icons/res/img/color.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4948,8 +4948,8 @@
           <string>Projection cells</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/color.png</normaloff>../res/img/color.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/color.png</normaloff>:/icons/res/img/color.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -4974,8 +4974,8 @@
           <string>Grid lines</string>
          </property>
          <property name="icon">
-          <iconset>
-           <normaloff>../res/img/color.png</normaloff>../res/img/color.png</iconset>
+          <iconset resource="icons.qrc">
+           <normaloff>:/icons/res/img/color.png</normaloff>:/icons/res/img/color.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -5337,8 +5337,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1029</width>
-             <height>510</height>
+             <width>1035</width>
+             <height>516</height>
             </rect>
            </property>
            <widget class="QWidget" name="verticalLayoutWidget">
@@ -5391,7 +5391,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../res/img/ESCOM.png</pixmap>
+         <pixmap resource="icons.qrc">:/icons/res/img/ESCOM.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -5410,7 +5410,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../res/img/UWE.png</pixmap>
+         <pixmap resource="icons.qrc">:/icons/res/img/UWE.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -5429,7 +5429,7 @@
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../res/img/logo.jpg</pixmap>
+         <pixmap resource="icons.qrc">:/icons/res/img/logo.jpg</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
@@ -5445,7 +5445,7 @@
          </rect>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Using the QT Framework (&lt;a href=&quot;https://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.qt.io/&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;Project: &lt;a href=&quot;https://github.com/eerick1997/vNCASimulator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Documentation: &lt;a href=&quot;https://github.com/eerick1997/ vNCASimulator/doc/vNSimulator.pdf&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator/doc/vNSimulator.pdf&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Using the QT Framework (&lt;a href=&quot;https://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.qt.io/&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;Project: &lt;a href=&quot;https://github.com/eerick1997/vNCASimulator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Documentation: &lt;a href=&quot;https://github.com/eerick1997/ vNCASimulator/doc/vNSimulator.pdf&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator/doc/vNCASimulatorDocumentation.pdf&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </widget>
@@ -5459,13 +5459,15 @@
      <x>0</x>
      <y>0</y>
      <width>1100</width>
-     <height>24</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
  <buttongroups>
   <buttongroup name="buttonGroup"/>

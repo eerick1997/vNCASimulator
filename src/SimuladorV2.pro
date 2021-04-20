@@ -56,3 +56,6 @@ DISTFILES += \
     res/img/stop.png \
     res/img/zoomin.png \
     res/img/zoomout.png
+
+RESOURCES += \
+    icons.qrc
