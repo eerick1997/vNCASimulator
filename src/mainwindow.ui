@@ -5365,26 +5365,26 @@
        <attribute name="title">
         <string>About</string>
        </attribute>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="infoLabel">
         <property name="geometry">
          <rect>
-          <x>330</x>
+          <x>400</x>
           <y>10</y>
-          <width>701</width>
-          <height>511</height>
+          <width>631</width>
+          <height>331</height>
          </rect>
         </property>
         <property name="text">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;vNSimulator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Artificial Life Robotics Lab (ALIROB, &lt;a href=&quot;https://www.comunidad.escom.ipn.mx/ALIROB/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.comunidad.escom.ipn.mx/ALIROB/&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;at Escuela Superior de Cómputo (ESCOM), Instituto Politécnico Nacional (IPN), México &lt;/p&gt;&lt;p&gt;in collaboration with Unconventional Computing Laboratory (UCL, &lt;a href=&quot;https://uncomp.uwe.ac.uk/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://uncomp.uwe.ac.uk/&lt;/span&gt;&lt;/a&gt;) &lt;/p&gt;&lt;p&gt;at University of the West of England (UWE), Bristol, United Kingdom &lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Collaborators:&lt;/p&gt;&lt;p&gt;‣ Esquivel Valdez Alberto&lt;/p&gt;&lt;p&gt;‣ Torres Hernández Eduardo&lt;/p&gt;&lt;p&gt;‣ Vargas Romero Erick Efraín&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;Using the QT Framework (&lt;a href=&quot;https://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.qt.io/&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;Project: &lt;a href=&quot;https://github.com/eerick1997/vNCASimulator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Documentation: &lt;a href=&quot;https://github.com/eerick1997/vNCASimulator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator/doc/vNSimulator.pdf&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;vNCASimulator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Artificial Life Robotics Lab (ALIROB, &lt;a href=&quot;https://www.comunidad.escom.ipn.mx/ALIROB/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.comunidad.escom.ipn.mx/ALIROB/&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;at Escuela Superior de Cómputo (ESCOM), Instituto Politécnico Nacional (IPN), México &lt;/p&gt;&lt;p&gt;in collaboration with Unconventional Computing Laboratory (UCL, &lt;a href=&quot;https://uncomp.uwe.ac.uk/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://uncomp.uwe.ac.uk/&lt;/span&gt;&lt;/a&gt;) &lt;/p&gt;&lt;p&gt;at University of the West of England (UWE), Bristol, United Kingdom &lt;/p&gt;&lt;p&gt;Collaborators:&lt;/p&gt;&lt;p&gt;‣ Esquivel Valdez Alberto&lt;/p&gt;&lt;p&gt;‣ Torres Hernández Eduardo&lt;/p&gt;&lt;p&gt;‣ Vargas Romero Erick Efraín&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="escomLabel">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>190</y>
-          <width>240</width>
-          <height>150</height>
+          <x>250</x>
+          <y>380</y>
+          <width>210</width>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -5397,13 +5397,13 @@
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="uweLabel">
         <property name="geometry">
          <rect>
           <x>30</x>
-          <y>370</y>
-          <width>250</width>
-          <height>140</height>
+          <y>380</y>
+          <width>210</width>
+          <height>120</height>
          </rect>
         </property>
         <property name="text">
@@ -5416,23 +5416,36 @@
          <bool>true</bool>
         </property>
        </widget>
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="logoLabel">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>20</y>
-          <width>240</width>
-          <height>150</height>
+          <x>30</x>
+          <y>30</y>
+          <width>341</width>
+          <height>321</height>
          </rect>
         </property>
         <property name="text">
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap>../res/img/ESCOM.png</pixmap>
+         <pixmap>../res/img/logo.jpg</pixmap>
         </property>
         <property name="scaledContents">
          <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="linksLabel">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>370</y>
+          <width>561</width>
+          <height>151</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Using the QT Framework (&lt;a href=&quot;https://www.qt.io/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://www.qt.io/&lt;/span&gt;&lt;/a&gt;)&lt;/p&gt;&lt;p&gt;Project: &lt;a href=&quot;https://github.com/eerick1997/vNCASimulator&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Documentation: &lt;a href=&quot;https://github.com/eerick1997/ vNCASimulator/doc/vNSimulator.pdf&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/eerick1997/vNCASimulator/doc/vNSimulator.pdf&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
        </widget>
       </widget>
