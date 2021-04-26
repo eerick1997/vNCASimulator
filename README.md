@@ -1,58 +1,85 @@
-# vNCASimulator
+<h1><img src="https://github.com/eerick1997/vNCASimulator/blob/72e7c3d97f79d0696684a508712bfc53bfbd02de/res/img/logo.jpg" alt="vNCASimulator" width="48" height="48"/>vNCASimulator</h1>
+
+The name of the program stands for "von Neumann Cellular Automata Simulator". It was developed by using the C++ programming language and the QT framework with the OOP (Object Oriented Programming) paradigm. This simulator is only a tool for a research done on this type of Cellular Automata.
 
 ## Objective
-Nowadays the Cellular Automata (CA) of Von Neumann type has not been studied in depth, that is why does not exist a classification process that allows make groups using the characteristics of this particular type of CA.
+Nowadays, Cellular Automata (CA) of the von Neumann type have not been studied in depth, so there is no classification process that allows making groups using the characteristics of this particular type of CA.
 
-To solve this problem we propose to make different explorations of the rules on bidimensional CA, in order to analyse patterns and behaviors according to the initial conditions, as well as obtaining the polynomial of each rule. With the idea to make easier to classify the rules obtained we developed a system that allows modify different characteristics of a CA and watch the simulation in real time, get the polynomial and classify each fixed point in a multiplatform environment it means that this software runs in different operative systems such as Linux, Mac OS and Windows.
+To solve this problem, it is proposed to perform different explorations of the rules on two-dimensional CAs, in order to analyze patterns and behaviors according to the initial conditions, as well as to obtain the polynomial of each rule. With the idea of facilitating the classification of the rules obtained, we developed a system that allows modifying different characteristics of a CA and observing the simulation in real time, obtaining the polynomial and classifying each fixed point in a multiplatform environment, i.e. this software runs on different operating systems such as Linux, Mac OS and Windows.
 
-If you are interested about this investigation you can find all about it [here](../vNCASimulator/doc/vNCASimulatorDocumentation.pdf), aditionally [here](../vNCASimulator/doc/vNCASimulatorManual.pdf) you have a user manual about the developed system, unfortunaly for now all this information it is only in Spanish.
+If you are interested about this investigation you can find the complete report [here](../vNCASimulator/doc/vNCASimulatorDocumentation.pdf). Aditionally, [here](../vNCASimulator/doc/vNCASimulatorManual.pdf) you have a user manual about the developed simulator. The information is only available in Spanish at this time.
 
 ## Features
+The current version of this program allows to:
 
-The current version of this program allows:
-
-- Stablish a evolution rule 
-- Modify the initial condition of a CA 
-- Choose between a semi- totalistic rule or complete totalistic rule 
-- Display in real time the simulation of the evolution space 
+- Set up an evolution rule 
+- Modify the initial conditions of the CA 
+- Choose between a semi-totalistic rule or a complete totalistic rule 
+- Display in real time the simulation of the evolution space
 - Display in real time the current population and Shannon's entropy 
 - Calculate the polynomial of each rule 
-- Classify each fixed of the polynomial 
-- Make a 3D projection of the CA 
-- Export and import binary files that contains the state of an specific simulation 
-- Generate a random evolution space 
+- Classify each fixed point of the polynomial 
+- Make a 3D projection of the evolution space 
+- Export and import binary files that contains the state of an specific simulation
+- Generate a random evolution space
 - Generate a random complete totalistic rule 
 - Choose between a Von Neumann or Moore neighboor to evaluate the CA 
-
-## Bugs
-
-- Some times the program calculates two generations at the same time and the program does not display correctly the current generation 
-
+- And more...
 ## Future work
+- [ ] Change the current algorithm to clasify the fixed points in order to get a better precision 
+- [ ] Analyse more rules
+- [ ] Implement different types of entrophy 
+- [ ] Improve the current color gradient 
 
-- Change the current algorithm to clasify the fixed points in order to get a better precision 
-- Analyse more rules 
-- Implement different types of entrophy 
-- Improve the current color gradient 
+### Fix bugs
+- [ ] Some times the program calculates two generations at the same time and the program does not correctly display the current generation.
 
-## How to execute the program
-### Windows
-Once that you already cloned this repository you need to move to the directory
+## Installation (repository cloning)
+```bash
+git clone https://github.com/eerick1997/vNCASimulator/
+```
 
-> exe/WindowsX64/debug/
+## Usage
+There is one step-guide for each operating system to execute the program. Please follow the corresponding link to read the instructions.
+- <a href="../vNCASimulator/WindowsUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/windows.svg" alt="windows" width="16" height="16"/>Windows</a>
+- <a href="../vNCASimulator/LinuxUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/linux.svg" alt="linux" width="16" height="16"/>Linux</a> 
+- <a href="../vNCASimulator/MacOSUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/apple.svg"  alt="macOS" width="16" height="16"/>macOS</a>
 
-And just execute the file
+## Languages and Tools
+- [C++](http://www.cplusplus.com/)
+- [QT Framework](https://www.qt.io/)
 
-> SimuladorV2.exe
+## Contributing
 
-### Linux 
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### macOS
+## Versioning
 
-Once that you already cloned this repository you need to move to the directory 
+The vNCASimulator will be mantained under the Semantic Versioning guidelines as much as possible. Releases will be numbered with the following format:
+`<major>.<minor>.<patch>`
 
-> exe/macOS/vNCASimulator/
+For more information on SemVer, please visit [http://semver.org](http://semver.org).
 
-Then just execute
+This is a program that includes many file types and technologies. Therefore, we deviate from the SemVer standard with the following versioning rules:
 
-> vNCASimulator.app
+* A **major** version when we have developed a completely new process, which will be previously defined in the BPMN diagram,
+* a **minor** version when we have added functionality in a backward compatible way in any of the sub-processes, and
+* a **patch** version when we have made backward compatible bug fixes.
+
+## License [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+You can checkout the full license [here](https://github.com/eerick1997/vNCASimulator/blob/deb8f0ecfe75fb25988eda5b7d30d783680c5a9e/LICENSE).
+The vNCASimulator code is licensed under the terms of the [GPL license](https://github.com/eerick1997/vNCASimulator/blob/deb8f0ecfe75fb25988eda5b7d30d783680c5a9e/LICENSE).
+
+## Attribution
+In order to make the development of this system possible, we used icons and tools whose authors and works are mentioned below.
+### Development
+- [QT Framework](https://www.qt.io/).
+
+### Design (icons)
+- Icons used in the program were made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.
+- Icons used in this repository were made by <a href="https://github.com/FortAwesome/Font-Awesome" title="Fontawesome">Fontawesome. CC BY 4.0 License.
+
+## Team
+* [eerick1997](https//github.com/eerick1997/)
+* [aesquivelv](https://github.com/aesquivelv/)
+* [lalo1017](https://github.com/lalo1017/)
