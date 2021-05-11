@@ -39,22 +39,22 @@ The current version of this program allows to:
 git clone https://github.com/eerick1997/vNCASimulator/
 ```
 
-## Usage
-There is one step-guide for each operating system to execute the program. Please follow the corresponding link to read the instructions.
-- <a href="../vNCASimulator/WindowsUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/windows.svg" alt="windows" width="16" height="16"/>Windows</a>
-- <a href="../vNCASimulator/LinuxUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/linux.svg" alt="linux" width="16" height="16"/>Linux</a> 
-- <a href="../vNCASimulator/MacOSUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/apple.svg"  alt="macOS" width="16" height="16"/>macOS</a>
+## Usage and development
+There is a step-by-step guide for each operating system to run/develop the program. Please follow the corresponding link to read the instructions.
+- <a href="../vNCASimulator/doc/WindowsUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/windows.svg" alt="windows" width="16" height="16"/>Windows</a>
+- <a href="../vNCASimulator/doc/LinuxUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/linux.svg" alt="linux" width="16" height="16"/>Linux</a> 
+- <a href="../vNCASimulator/doc/MacOSUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/apple.svg"  alt="macOS" width="16" height="16"/>macOS</a>
+
+There is also a user-manual which applies for the 3 operating systems mentioned above. You can find it [here](https://github.com/eerick1997/vNCASimulator/blob/6f6c4e8e7c765411ed5a7d3192e1c02ec3af637b/doc/vNCASimulatorManual.pdf).
 
 ## Languages and Tools
 - [C++](http://www.cplusplus.com/)
 - [QT Framework](https://www.qt.io/)
 
 ## Contributing
-
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Versioning
-
 The vNCASimulator will be mantained under the Semantic Versioning guidelines as much as possible. Releases will be numbered with the following format:
 `<major>.<minor>.<patch>`
 
@@ -66,7 +66,7 @@ This is a program that includes many file types and technologies. Therefore, we 
 * a **minor** version when we have added functionality in a backward compatible way in any of the sub-processes, and
 * a **patch** version when we have made backward compatible bug fixes.
 
-## License [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
+## License [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/eerick1997/vNCASimulator/blob/deb8f0ecfe75fb25988eda5b7d30d783680c5a9e/LICENSE)
 You can checkout the full license [here](https://github.com/eerick1997/vNCASimulator/blob/deb8f0ecfe75fb25988eda5b7d30d783680c5a9e/LICENSE).
 The vNCASimulator code is licensed under the terms of the [GPL license](https://github.com/eerick1997/vNCASimulator/blob/deb8f0ecfe75fb25988eda5b7d30d783680c5a9e/LICENSE).
 
@@ -76,8 +76,8 @@ In order to make the development of this system possible, we used icons and tool
 - [QT Framework](https://www.qt.io/).
 
 ### Design (icons)
-- Icons used in the program were made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>.
-- Icons used in this repository were made by <a href="https://github.com/FortAwesome/Font-Awesome" title="Fontawesome">Fontawesome. CC BY 4.0 License.
+- Icons used in the program were made by [Kiranshastry](https://www.flaticon.com/authors/kiranshastry) from [Flaticon](https://www.flaticon.com/).
+- Icons used in this repository were made by [Fontawesome](https://github.com/FortAwesome/Font-Awesome). CC BY 4.0 License.
 
 ## Team
 * [eerick1997](https//github.com/eerick1997/)
