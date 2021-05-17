@@ -12,17 +12,17 @@ These instructions apply for macOS users.
 1. Locate the path were you have cloned the repository.
 2. Find and move into the following directory:
 
-> [/exe/macOS/vNCASimulator/](../vNCASimulator/exe/macOS/debug/)
+> [/exe/macOS/vNCASimulator/](../exe/macOS/vNCASimulator)
 
 3. Execute the file:
 
-> [vNCASimulator.app](../vNCASimulator/exe/macOS/vNCASimulator/vNCASimulator.app)
+> [vNCASimulator.app](../exe/macOS/vNCASimulator/vNCASimulator.app)
 
 1. You will be able to see the Settings window as shown below.
 
 ![Settings](https://raw.githubusercontent.com/eerick1997/vNCASimulator/main/res/screens/macOS/Settings.jpg)
 
-For more details on how to use the simulator, there is a user-manual [here](https://raw.githubusercontent.com/eerick1997/vNCASimulator/main/res/screens/macOS/vNCASimulatorManual.pdf).
+For more details on how to use the simulator, there is a user-manual [here](https://github.com/eerick1997/vNCASimulator/blob/6f6c4e8e7c765411ed5a7d3192e1c02ec3af637b/doc/vNCASimulatorManual.pdf).
 
 ## <img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/apple.svg" alt="macOS" width="16" height="16"/>C++ developers
 
