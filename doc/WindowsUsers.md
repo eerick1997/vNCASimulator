@@ -12,11 +12,11 @@ These instructions apply for Windows users.
 1. Locate the path were you have cloned the repository.
 2. Find and move into the following directory:
 
-> [/exe/WindowsX64/debug/](../vNCASimulator/exe/WindowsX64/debug/)
+> [/exe/WindowsX64/debug/](../exe/WindowsX64/debug/)
 
 3. Execute the file:
 
-> [SimuladorV2.exe](../vNCASimulator/exe/WindowsX64/debug/SimuladorV2.exe)
+> [SimuladorV2.exe](../exe/WindowsX64/debug/SimuladorV2.exe)
 
 4. You will be able to see the Settings window as shown below.
 
