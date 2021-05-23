@@ -16,7 +16,7 @@ These instructions apply for Linux users.
 
 3. Execute the file:
 
-> [SimuladorV2](../exe/Linux/SimuladorV2)
+> [SimuladorV2](../exe/Linux/files/SimuladorV2)
 
 1. You will be able to see the Settings window as shown below.
 
