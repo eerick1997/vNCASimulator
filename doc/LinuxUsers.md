@@ -20,7 +20,7 @@ These instructions apply for Linux users.
 
 1. You will be able to see the Settings window as shown below.
 
-![Settings](https://raw.githubusercontent.com/eerick1997/vNCASimulator/main/res/screens/Linux/Settings.jpg)
+![Settings](https://raw.githubusercontent.com/eerick1997/vNCASimulator/main/res/screens/Linux/Settings.png)
 
 For more details on how to use the simulator, there is a user-manual [here](https://github.com/eerick1997/vNCASimulator/blob/6f6c4e8e7c765411ed5a7d3192e1c02ec3af637b/doc/vNCASimulatorManual.pdf).
 
