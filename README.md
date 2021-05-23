@@ -42,7 +42,7 @@ git clone https://github.com/eerick1997/vNCASimulator/
 ## Usage and development
 There is a step-by-step guide for each operating system to run/develop the program. Please follow the corresponding link to read the instructions.
 - <a href="https://github.com/eerick1997/vNCASimulator/blob/ad3dc024b3c088fb949d5affab796d7229fcc9c0/doc/WindowsUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/windows.svg" alt="windows" width="16" height="16"/>Windows</a>
-- <a href="../vNCASimulator/doc/LinuxUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/linux.svg" alt="linux" width="16" height="16"/>Linux</a> 
+- <a href="https://github.com/eerick1997/vNCASimulator/blob/92918579a7c3b2fc91f45f32299fa7e33152bb40/doc/LinuxUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/linux.svg" alt="linux" width="16" height="16"/>Linux</a> 
 - <a href="https://github.com/eerick1997/vNCASimulator/blob/92918579a7c3b2fc91f45f32299fa7e33152bb40/doc/MacOSUsers.md" target="_blank"><img src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/brands/apple.svg"  alt="macOS" width="16" height="16"/>macOS</a>
 
 There is also a user-manual which applies for the 3 operating systems mentioned above. You can find it [here](https://github.com/eerick1997/vNCASimulator/blob/6f6c4e8e7c765411ed5a7d3192e1c02ec3af637b/doc/vNCASimulatorManual.pdf).
