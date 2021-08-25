@@ -206,8 +206,8 @@ void widget_evolution_space::set_speed(int16_t n_speed) {
 }
 
 void widget_evolution_space::next_generation_update() {
-    Cellular_automata->start();
-    Cellular_automata->wait();
+    Cellular_automata->run();
+    //Cellular_automata->wait();
     repaint();
 }
 

@@ -566,7 +566,10 @@ void MainWindow::on_checkGrid_clicked(bool checked) {
         mw->Widget_evolution_space->set_show_grid(grid_visible);
 }
 
-void MainWindow::on_pushExport_clicked() { exportGame(); }
+void MainWindow::on_pushExport_clicked() {
+    qDebug() << mw->Widget_evolution_space->Cellular_automata->get_alive_cells();
+    exportGame();
+}
 
 void MainWindow::loadByFile() {
     QFile file(file_name);
@@ -737,8 +740,7 @@ void MainWindow::exportGame() {
                                  QMessageBox::Ok);
             return;
         }
-        cellular_automata *Cellular_automata =
-                mw->Widget_evolution_space->Cellular_automata;
+        cellular_automata *Cellular_automata = mw->Widget_evolution_space->Cellular_automata;
         QFile file(path);
 
         if (file.open(QIODevice::WriteOnly)) {
@@ -767,6 +769,7 @@ void MainWindow::exportGame() {
 
             /*****************************************/
             matrix m = Cellular_automata->get_evolution_space();
+
             for (int i = 0; i < width; i++) {
                 for (int j = 0; j < height; j++)
                     out << (qint32)m[i][j];

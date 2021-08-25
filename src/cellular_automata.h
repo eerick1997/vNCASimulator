@@ -13,11 +13,12 @@
 #ifndef CELLULAR_AUTOMATA_H
 #define CELLULAR_AUTOMATA_H
 
-using matrix = std::array<std::array<int, 2000>, 2000>;
+//using matrix = std::array<std::array<int, 2000>, 2000>;
+using matrix = std::vector<std::vector<int32_t>>;
 
-class cellular_automata : public QThread{
+class cellular_automata {
 
-protected:
+public:
     void run();
 
 private:
